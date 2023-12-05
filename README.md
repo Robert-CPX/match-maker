@@ -11,7 +11,7 @@
     - follow check, effect, interaction pattern
 - leverage battle-tested libraries
 - delay action for a set of time(block.timestamp) when funds is involved
-- use `call()` when sending Ether via calling the `fallback` function or `msg.data.length == 0`, not the recommend way to call existing functions, reasons avoid using `call()`:
+- use `call()` when sending Ether via calling the `fallback` function or `msg.data.length == 0`, not the recommend way to call existing functions:
   - Reverts are not bubbled up
   - Type checks are bypassed
   - Function existence checks are omitted

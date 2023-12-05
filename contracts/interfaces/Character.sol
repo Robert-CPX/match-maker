@@ -5,6 +5,7 @@ import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
 
 interface Character {
+  event Proposal(address indexed who, address indexed engagedTo);
   error AgeTooLow();
   error AgeTooHigh();
   error SexualMismatch();
@@ -35,6 +36,7 @@ interface Character {
     Nature nature;
   }
 
-  event Proposal(address indexed who, address indexed engagedTo);
-  function getProfile() external view returns (Profile memory);
+  function getProfile() external view returns(Profile memory);
+  function getEligibility() external view returns(bool);
+  
 }
