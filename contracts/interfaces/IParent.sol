@@ -6,7 +6,12 @@ import "./IHusbandToBe.sol";
 import "./IWifeToBe.sol";
 
 interface IParent is Character {
-  
+  error NotApprovedForPricePayment(address);
+  error ProposerAlreadyApproved(address);
+  error ApprovalAlreadyGivenToSomeone();
+  error InsufficientBridePrice();
+  error UnresolvedPayment();
+
   struct Daughter {
     bool pricePaymentApproved;
     bool isOurDaugther;
