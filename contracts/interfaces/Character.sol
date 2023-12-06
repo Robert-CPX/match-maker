@@ -9,8 +9,10 @@ interface Character {
   error AgeTooLow();
   error AgeTooHigh();
   error SexualMismatch();
+  error InvalidBankAddress();
+  error NoMarriedYet();
 
-  enum Status { SINGLE, TAKEN, MARRIED, DIVORCED }
+  enum Status { SINGLE, TAKEN, DIVORCED, MARRIED }
   enum Gender { MALE, FEMALE }
   enum Nature { DRUNK, NONDRUNK}
 
@@ -28,8 +30,8 @@ interface Character {
     uint age;
     Gender gender;
     uint miniBankBalance;
-    IREC20 bank;
-    IERC721 assets;
+    IREC20 asset;
+    IERC721 property;
     bool shouldOwnAProperty;
     uint ethnic;
     Status status;

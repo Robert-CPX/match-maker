@@ -5,4 +5,7 @@ import "./Character.sol";
 
 interface IWifeToBe is Character {
   event Pregnancy(bytes32 pregnacy, address indexed _husband);
+
+  function getPropose() external returns(bool);
+  function meetHusband() external returns(bool);
 }
